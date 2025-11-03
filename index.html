@@ -1,20 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./test.css">
+  <title>Quizz Géographie</title>
 </head>
 <body>
-    <section id="quizz_container">
-        <div class="question_container"><h3>QUESTIONS</h3></div>
-        <div class="propositions_container"><h4>Propositions de réponses</h4>
-        <div></div> 
-        <div></div>
-        <div></div>
-        <div></div>  
-        <button class="Valider">Valider</button> 
-        <button class="Indices">Indices</button>  
-    </section>
+  <header>
+    <nav class="Menu">
+      <a href="#consignes_container">CONSIGNES</a>
+      <a href="#quizz_container">QUIZZ</a>
+    </nav>
+  </header>
+
+  <section id="consignes_container">
+    <div class="quizz_title">
+      <h1>QUIZZ GEOGRAPHIE</h1>
+    </div>
+    <div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+    </div>
+  </section>
+
+  <section id="quizz_container">
+    <div class="question_container">
+      <h3 id="question">QUESTIONS</h3>
+      <div class="propositions_container">
+        <h4>Propositions de réponses</h4>
+        <div id="proposition_1">Question_1</div>
+        <div id="proposition_2">Question_2</div>
+        <div id="proposition_3">Question_3</div>
+        <div id="proposition_4">Question_4</div>
+        <button class="valider" aria-label="Valider la réponse">Valider</button>
+        <button class="indice" aria-label="Afficher un indice">Indices</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="going_up_to_page_container">
+    <button type="button" aria-label="Retour au menu">Revenir au menu</button>
+  </footer>
+
+  <section id="Scores_container">
+    <div class="Scores"><h3>Vos résultats sont les suivants :</h3></div>
+    <div class="Explications-container">
+      <div class="Panel1"><h4>Votre score est compris entre 0 et 4 - vos connaissances en géographie ont besoin d'être renforcées - vous pouvez vous aider du site suivant https://world-geography-games.com/fr/</h4></div>
+      <div class="Panel2"><h4>Votre score est compris entre 5 et 7 - Votre niveau est intermédiaire - vous pouvez compléter votre enseignement si vous souhaitez atteindre un niveau confirmé</h4></div>
+      <div class="Panel3"><h4>Votre score est compris entre 8 et 10 - Votre niveau de connaissance est très élevé - Bravo!</h4></div>
+      <button class="Rejouer" aria-label="Rejouer le quizz">Rejouer</button>
+    </div>
+  </section>
+
+  <script src="./script.js"></script>
 </body>
 </html>
+
