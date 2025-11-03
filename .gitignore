@@ -1,2 +1,11 @@
+node_modules/
+dist/
+orga/
+testTsFolder/
 *.docx
 *.txt
+
+.DS_Store
+Thumbs.db
+desktop.ini
+.parcel-cache
