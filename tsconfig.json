@@ -40,5 +40,7 @@
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
-  }
+  },
+  "include": ["src/**/*"],    // Compile tous les fichiers présents dans "src", y compris ceux présents dans les éventuels sous-répertoires (prise en compte récursive)
+  "exclude": ["node_modules"] // Ignore le dossier "node_modules"
 }
