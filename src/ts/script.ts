@@ -60,78 +60,75 @@ let questions_propositions: innerType[] = [
 
 let questionHolder = document.querySelector("#question") as HTMLElement;
 
-let propositions = document.querySelectorAll<HTMLElement>(".propositions");
 let proposition_1 = document.querySelector("#proposition_1") as HTMLElement;
 let proposition_2 = document.querySelector("#proposition_2") as HTMLElement;
 let proposition_3 = document.querySelector("#proposition_3") as HTMLElement;
 let proposition_4 = document.querySelector("#proposition_4") as HTMLElement;
 let valider = document.querySelector(".valider") as HTMLElement;
 let commencer = document.querySelector(".commencer") as HTMLElement;
-
-let scoreHolder = document.querySelector("#score") as HTMLElement;
 // let rejouer = document.querySelector(".rejouer") as HTMLElement;
 
-let isActiveForAnyPropositionSelected: boolean = false;
+let scoreHolder = document.querySelector("#score") as HTMLElement;
+let responseChecker: string;
 
-propositions.forEach((el) => {
-  el.addEventListener("click", () => {
-    console.log("Propositions cliquées!" + " | isActive est :" + isActiveForAnyPropositionSelected);
-    isActiveForAnyPropositionSelected = true;
-    console.log("isActive est : " + isActiveForAnyPropositionSelected);
-  });
+
+
+// ------ boolean checker
+
+// let propositions = document.querySelectorAll<HTMLElement>(".propositions");
+// let isActiveForAnyPropositionSelected: boolean = false;
+// let isActiveP1: boolean = false;
+// let isActiveP2: boolean = false;
+// let isActiveP3: boolean = false;
+// let isActiveP4: boolean = false;
+
+
+// propositions.forEach((el) => {
+//   el.addEventListener("click", () => {
+//     isActiveForAnyPropositionSelected = true;
+//     console.log(
+//       "Propositions cliquées!" +
+//         " | isActive est :" +
+//         isActiveForAnyPropositionSelected
+//     );
+//   });
+// });
+
+
+
+  proposition_1.addEventListener("click", () => {
+  responseChecker = questions_propositions[i]!.Proposition_1!;
+  console.log(responseChecker);
 });
+proposition_2.addEventListener("click", () => {
+  responseChecker = questions_propositions[i]!!.Proposition_2!;
+  console.log(responseChecker);
+});
+proposition_3.addEventListener("click", () => {
+  responseChecker = questions_propositions[i]!.Proposition_3!;
+  console.log(responseChecker);
+});
+proposition_4.addEventListener("click", () => {
+  responseChecker = questions_propositions[i]!.Proposition_4!;
+  console.log(responseChecker);
+});
+
 
 valider.addEventListener("click", () => {
-  if(isActiveForAnyPropositionSelected) {
-    questionAndPropositionsDisplayer(questions_propositions, i);
-    isActiveForAnyPropositionSelected = false;
-    console.log("isActive est : " + isActiveForAnyPropositionSelected);
+  console.log(responseChecker + "<---- la réponse");
+  if (responseChecker === questions_propositions[i]!.réponse!) {
+    score++;
+    scoreHolder.textContent = score.toString(10);
+    console.log("Le score est à " + score);
+    console.log("----- fin d'itération à " + i);
     i++;
-  };
+    // isActiveForAnyPropositionSelected = false;
+    questionAndPropositionsDisplayer(questions_propositions, i);
+  } else {
+    i++;
+    questionAndPropositionsDisplayer(questions_propositions, i);
+  }
 });
-
-function questionSelected(objet: Array<innerType>, index: number) {
-  proposition_1.addEventListener("click", () => {
-    if ((objet[index]!.Proposition_1! === objet[index]!.réponse!) && isActiveForAnyPropositionSelected) {
-      console.log(objet[index]);
-      console.log(objet[index]?.Proposition_1 + " " + objet[index]?.réponse);
-      score++;
-      scoreHolder.textContent = score.toString(10);
-      console.log("Le score est à " + score);
-      console.log("----- fin d'itération à " + index);
-    }
-  });
-  proposition_2.addEventListener("click", () => {
-    if ((objet[index]!.Proposition_2! === objet[index]!.réponse!) && isActiveForAnyPropositionSelected) {
-      console.log(objet[index]);
-      console.log(objet[index]?.Proposition_2 + " " + objet[index]?.réponse);
-      score++;
-      scoreHolder.textContent = score.toString(10);
-      console.log("Le score est à " + score);
-      console.log("----- fin d'itération à " + index);
-    }
-  });
-  proposition_3.addEventListener("click", () => {
-    if ((objet[index]!.Proposition_3! === objet[index]!.réponse!) && isActiveForAnyPropositionSelected) {
-      console.log(objet[index]);
-      console.log(objet[index]?.Proposition_3 + " " + objet[index]?.réponse);
-      score++;
-      scoreHolder.textContent = score.toString(10);
-      console.log("Le score est à " + score);
-      console.log("----- fin d'itération à " + index);
-    }
-  });
-  proposition_4.addEventListener("click", () => {
-    if ((objet[index]!.Proposition_4! === objet[index]!.réponse!) && isActiveForAnyPropositionSelected) {
-      console.log(objet[index]);
-      console.log(objet[index]?.Proposition_4 + " " + objet[index]?.réponse);
-      score++;
-      scoreHolder.textContent = score.toString(10);
-      console.log("Le score est à " + score);
-      console.log("----- fin d'itération à " + index);
-    }
-  });
-}
 
 function questionAndPropositionsDisplayer(
   obj: Array<innerType>,
@@ -143,15 +140,17 @@ function questionAndPropositionsDisplayer(
   proposition_2.textContent = obj[index]?.Proposition_2!;
   proposition_3.textContent = obj[index]?.Proposition_3!;
   proposition_4.textContent = obj[index]?.Proposition_4!;
-  questionSelected(obj, index);
 }
 
 let i = 0;
 let score = 0;
 function gameLauncher(index: number): void {
-  commencer.addEventListener("click", () =>
-    questionAndPropositionsDisplayer(questions_propositions, index)
-  );
+  commencer.addEventListener("click", () => {
+    i = 0;
+    score = 0;
+    scoreHolder.textContent = score.toString(10);
+    questionAndPropositionsDisplayer(questions_propositions, index);
+  });
 }
 
 gameLauncher(i);
