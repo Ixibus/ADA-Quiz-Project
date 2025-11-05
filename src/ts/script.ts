@@ -23,6 +23,7 @@ let questions_propositions: innerType[] = [
     Proposition_1: "Vrai",
     Proposition_2: "faux",
     réponse: "faux",
+
     indice: "Donner un indice serait trop facile.",
   },
   {
@@ -66,14 +67,13 @@ let questions_propositions: innerType[] = [
 ];
 
 let questionHolder = document.querySelector("#question") as HTMLElement;
-
 let proposition_1 = document.querySelector("#proposition_1") as HTMLElement;
 let proposition_2 = document.querySelector("#proposition_2") as HTMLElement;
 let proposition_3 = document.querySelector("#proposition_3") as HTMLElement;
 let proposition_4 = document.querySelector("#proposition_4") as HTMLElement;
 let valider = document.querySelector(".valider") as HTMLElement;
 let commencer = document.querySelector(".commencer") as HTMLElement;
-let rejouer = document.querySelector(".rejouer") as HTMLElement;
+let rejouer = document.querySelector(".Rejouer") as HTMLElement;
 let indice = document.querySelector(".indice") as HTMLElement;
 let indiceplaceholder = document.querySelector(
   "#indice_placeholder"
@@ -139,6 +139,65 @@ function responseSelected(index: number): void {
   });
 }
 
+
+// let i = 0;
+// valider.addEventListener("click", () => {
+//   console.log("--------- itération " + i);
+//   questionHolder.textContent = questions_propositions[i]?.question!;
+//   proposition_1.textContent = questions_propositions[i]?.Proposition_1!;
+//   proposition_2.textContent = questions_propositions[i]?.Proposition_2!;
+//   proposition_3.textContent = questions_propositions[i]?.Proposition_3!;
+//   proposition_4.textContent = questions_propositions[i]?.Proposition_4!;
+//   questionSelected(questions_propositions);
+// });
+
+// function questionSelected(objet: Array<innerType>) {
+//   proposition_1.addEventListener("click", () => {
+//     if (objet[i]!.Proposition_1! === objet[i]!.réponse!) {
+//       console.log(objet[i]);
+//       console.log(objet[i]?.Proposition_1 + " " + objet[i]?.réponse);
+//       score++;
+//       scoreHolder.textContent = score.toString(10);
+//       console.log("Le score est à " + score);
+//       console.log("----- fin d'itération à " + i);
+//       i++;
+//     }
+//   });
+//   proposition_2.addEventListener("click", () => {
+//     if (objet[i]!.Proposition_2! === objet[i]!.réponse!) {
+//       console.log(objet[i]);
+//       console.log(objet[i]?.Proposition_2 + " " + objet[i]?.réponse);
+//       score++;
+//       scoreHolder.textContent = score.toString(10);
+//       console.log("Le score est à " + score);
+//       console.log("----- fin d'itération à " + i);
+//       i++;
+//     }
+//   });
+//   proposition_3.addEventListener("click", () => {
+//     if (objet[i]!.Proposition_3! === objet[i]!.réponse!) {
+//       console.log(objet[i]);
+//       console.log(objet[i]?.Proposition_3 + " " + objet[i]?.réponse);
+//       score++;
+//       scoreHolder.textContent = score.toString(10);
+//       console.log("Le score est à " + score);
+//       console.log("----- fin d'itération à " + i);
+//       i++;
+//     }
+//   });
+//   proposition_4.addEventListener("click", () => {
+//     if (objet[i]!.Proposition_4! === objet[i]!.réponse!) {
+//       console.log(objet[i]);
+//       console.log(objet[i]?.Proposition_4 + " " + objet[i]?.réponse);
+//       score++;
+//       scoreHolder.textContent = score.toString(10);
+//       console.log("Le score est à " + score);
+//       console.log("----- fin d'itération à " + i);
+//       i++;
+//     }
+//   });
+// }
+
 function questionAndPropositionsDisplayer(
   obj: Array<innerType>,
   index: number
@@ -181,5 +240,4 @@ function emptyField(): void {
   indiceplaceholder.textContent = "";
   responseChecker = "";
   scoreHolder.textContent = score.toString(10);
-  responseSelected(0);
 }

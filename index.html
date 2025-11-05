@@ -1,62 +1,136 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./">
-  <title>Quizz Géographie</title>
-</head>
-<body>
-  <header>
-    <nav class="Menu">
-      <a href="#consignes_container">CONSIGNES</a>
-      <a href="#quizz_container">QUIZZ</a>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <section id="consignes_container">
-    <div class="quizz_title">
-      <h1>QUIZZ GEOGRAPHIE</h1>
-    </div>
-    <div>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
-    </div>
-  </section>
+    <link rel="stylesheet" href="./src/css/main.css" />
+    <title>Quizz Géographie</title>
+  </head>
+  <body>
+    <header>
+      <nav class="Menu">
+        <a href="#consignes_container">CONSIGNES</a>
+        <a href="#quizz_container">QUIZZ</a>
+      </nav>
+    </header>
 
-  <section id="quizz_container">
-    <div class="question_container">
-      <h3 id="question">QUESTIONS</h3>
-      <div class="propositions_container">
-        <h4 class="propositions_container">Propositions de réponses</h4>
-        <div class="propositions" id="proposition_1">Proposition_1</div>
-        <div class="propositions" id="proposition_2">Proposition_2</div>
-        <div class="propositions" id="proposition_3">Proposition_3</div>
-        <div class="propositions" id="proposition_4">Proposition_4</div>
-        <button class="valider" aria-label="Valider la réponse">Valider</button>
-        <button class="indice" aria-label="Afficher un indice">Indices</button>
-        <button class="commencer" aria-label="Valider la réponse">Commencer</button>
+    <section id="consignes_container">
+      <div class="quizz_title">
+        <h1>QUIZZ GEOGRAPHIE &#x1F30E</h1>
       </div>
+      <div>
+        <p>
+          📝 Consignes du Quiz Bienvenue sur notre quiz interactif ! Avant de
+          commencer, merci de lire attentivement les consignes suivantes pour
+          profiter pleinement de l’expérience : <br />
+          <br />
+          🎯 Objectif Ce quiz a pour but de tester vos connaissances de manière
+          ludique et pédagogique. Il peut être utilisé dans le cadre d’une
+          formation, d’une auto-évaluation ou simplement pour le plaisir
+          d’apprendre.
+          <br />
+          <br />
+          🕒 Durée <br />
+          • Le quiz est chronométré (si activé) : veillez à disposer du temps
+          nécessaire avant de commencer.<br />
+          • Une fois lancé, vous ne pourrez pas mettre le quiz en pause.<br />
+          <br />
+          ✅ Fonctionnement <br />
+          • Chaque question propose plusieurs réponses, mais une seule est
+          correcte. <br />
+          • Cliquez sur la réponse de votre choix, puis validez pour passer à la
+          question suivante. <br />
+          • À la fin du quiz, votre score et les bonnes réponses seront
+          affichés. <br />
+          <br />
+          🔒 Confidentialité Aucune donnée personnelle n’est collectée lors de
+          ce quiz, sauf mention contraire. Vos résultats sont privés et ne
+          seront pas partagés.
+        </p>
+      </div>
+      <br />
+      <br />
+    </section>
+
+    <section id="quizz_container">
+      <div class="question_container">
+        <h3 id="question">QUESTIONS - TESTEZ VOTRE NIVEAU EN GEOGRAPHIE &#x1F30E</h3>
+        <br />
+        <br />
+        <div class="propositions_container">
+          <h4 class="propositions_container">
+            Propositions de réponses (cliquez sur votre proposition et validez)
+          </h4>
+          <br /><br />
+          <div class="propositions" id="proposition_1">Proposition_1</div>
+          <br /><br />
+          <div class="propositions" id="proposition_2">Proposition_2</div>
+          <br /><br />
+          <div class="propositions" id="proposition_3">Proposition_3</div>
+          <br /><br />
+          <div class="propositions" id="proposition_4">Proposition_4</div>
+          <br /><br />
+          <button class="commencer" aria-label="Valider la réponse">
+            Commencer
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="going_up_to_page_container">
+      <button class="valider" aria-label="Valider la réponse">
+        <strong>Valider</strong>
+      </button>
+      <button class="indice" aria-label="Afficher un indice">
+        <strong>Indices</strong>
+      </button>
       <p id="indice_placeholder"></p>
       <p id="score"></p>
-    </div>
-  </section>
+      <button class="button" aria-label="Retour au menu">
+        <strong>Revenir au menu</strong>
+      </button>
+    </footer>
 
-  <footer class="going_up_to_page_container">
-    <button type="button" aria-label="Retour au menu">Revenir au menu</button>
-  </footer>
+    <section id="Scores_container">
+      <div class="Scores">
+        <h3><strong>Vos résultats sont les suivants :</strong></h3>
+      </div>
+      <div class="Explications-container">
+        <br />
+        <div class="Panel1">
+          <h4>
+            1- Votre score est compris entre 0 et 4 - vos connaissances en
+            géographie ont besoin d'être renforcées - vous pouvez vous aider du
+            site suivant https://world-geography-games.com/fr/
+          </h4>
+        </div>
+        <br />
+        <div class="Panel2">
+          <h4>
+            2- Votre score est compris entre 5 et 7 - Votre niveau est
+            intermédiaire - vous pouvez compléter votre enseignement si vous
+            souhaitez atteindre un niveau confirmé
+          </h4>
+        </div>
+        <br />
+        <div class="Panel3">
+          <h4>
+            3- Votre score est compris entre 8 et 10 - Votre niveau de
+            connaissance est très élevé - Bravo!
+          </h4>
+        </div>
+        <br />
+        <button class="Rejouer" aria-label="Rejouer le quizz">
+          <strong>Rejouer</strong>
+        </button>
+      </div>
+    </section>
 
-  <section id="Scores_container">
-    <div class="Scores"><h3>Vos résultats sont les suivants :</h3></div>
-    <div class="Explications-container">
-      <div class="Panel1"><h4>Votre score est compris entre 0 et 4 - vos connaissances en géographie ont besoin d'être renforcées - vous pouvez vous aider du site suivant https://world-geography-games.com/fr/</h4></div>
-      <div class="Panel2"><h4>Votre score est compris entre 5 et 7 - Votre niveau est intermédiaire - vous pouvez compléter votre enseignement si vous souhaitez atteindre un niveau confirmé</h4></div>
-      <div class="Panel3"><h4>Votre score est compris entre 8 et 10 - Votre niveau de connaissance est très élevé - Bravo!</h4></div>
-      <button class="rejouer" aria-label="Rejouer le quizz">Rejouer</button>
-    </div>
-  </section>
+    <script>
+      var exports = {};
+    </script>
 
-      <script>var exports = {};</script>
     <script defer src="./dist/ts/script.js"></script>
-</body>
+  </body>
 </html>
-
