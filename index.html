@@ -17,7 +17,7 @@
 
     <section id="consignes_container">
       <div class="quizz_title">
-        <!-- <h1>QUIZZ GEOGRAPHIE &#x1F30E</h1> -->
+        <h1>QUIZZ GEOGRAPHIE &#x1F30E</h1>
       </div>
       <div>
         <p>
@@ -55,10 +55,11 @@
 
     <section id="quizz_container">
       <div class="question_container">
-        <!-- <h3 id="question">QUESTIONS - TESTEZ VOTRE NIVEAU EN GEOGRAPHIE &#x1F30E</h3> -->
+        <h3 id="question">QUESTIONS - TESTEZ VOTRE NIVEAU EN GEOGRAPHIE &#x1F30E</h3>
+        <br>
+        <img id="drapeau" src="\greenland-flag-jpg-xl-1536x998.jpg" alt="Drapeau du Groenland" style="display: none; width: 150px;">
         <br />
-        <br />
-        <div class="propositions_container">
+          <div class="propositions_container">
           <h4 class="propositions_container">
             Propositions de réponses (cliquez sur votre proposition et validez)
           </h4>
@@ -92,9 +93,13 @@
       </button>
     </footer>
 
-    <section id="Scores_container">
+
+
+    <section id="Scores_container", style="display: none"> 
       <div class="Scores">
         <h3><strong>Vos résultats sont les suivants :</strong></h3>
+        <p id="score_final"></p>
+
       </div>
       <div class="Explications-container">
         <br />
@@ -288,6 +293,8 @@
               <p class="explication_container explication_container10"> Il s'agit de Porto Rico. Une information qui vous servira à briller en société...</p>
             </div>
           </div>
+
+
         </div>
       </div>
       <button class="Rejouer" aria-label="Rejouer le quizz">
