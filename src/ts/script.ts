@@ -85,6 +85,8 @@ let drapeau = document.querySelector("#drapeau") as HTMLImageElement;
 let pageScore = document.querySelector("#Scores_container") as HTMLElement;
 let scoreFinal = document.querySelector("#score_final") as HTMLElement;
 
+
+
 // ------ boolean checker
 
 let propositions = document.querySelectorAll<HTMLElement>(".propositions");
