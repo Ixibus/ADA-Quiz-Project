@@ -82,10 +82,6 @@ let indiceplaceholder = document.querySelector(
 let scoreHolder = document.querySelector("#score") as HTMLElement;
 let responseChecker: string;
 
-<<<<<<< HEAD
-// ------ boolean checker
-
-=======
 let drapeau = document.querySelector("#drapeau") as HTMLImageElement;
 let pageScore = document.querySelector("#Scores_container") as HTMLElement;
 let scoreFinal = document.querySelector("#score_final") as HTMLElement;
@@ -93,7 +89,6 @@ let scoreFinal = document.querySelector("#score_final") as HTMLElement;
 
 // ------ boolean checker
 
->>>>>>> main
 let propositions = document.querySelectorAll<HTMLElement>(".propositions");
 // let isActiveForAnyPropositionSelected: boolean = false;
 // let isActiveP1: boolean = false;
@@ -154,68 +149,6 @@ function responseSelected(index: number): void {
   });
 }
 
-<<<<<<< HEAD
-
-// let i = 0;
-// valider.addEventListener("click", () => {
-//   console.log("--------- itération " + i);
-//   questionHolder.textContent = questions_propositions[i]?.question!;
-//   proposition_1.textContent = questions_propositions[i]?.Proposition_1!;
-//   proposition_2.textContent = questions_propositions[i]?.Proposition_2!;
-//   proposition_3.textContent = questions_propositions[i]?.Proposition_3!;
-//   proposition_4.textContent = questions_propositions[i]?.Proposition_4!;
-//   questionSelected(questions_propositions);
-// });
-
-// function questionSelected(objet: Array<innerType>) {
-//   proposition_1.addEventListener("click", () => {
-//     if (objet[i]!.Proposition_1! === objet[i]!.réponse!) {
-//       console.log(objet[i]);
-//       console.log(objet[i]?.Proposition_1 + " " + objet[i]?.réponse);
-//       score++;
-//       scoreHolder.textContent = score.toString(10);
-//       console.log("Le score est à " + score);
-//       console.log("----- fin d'itération à " + i);
-//       i++;
-//     }
-//   });
-//   proposition_2.addEventListener("click", () => {
-//     if (objet[i]!.Proposition_2! === objet[i]!.réponse!) {
-//       console.log(objet[i]);
-//       console.log(objet[i]?.Proposition_2 + " " + objet[i]?.réponse);
-//       score++;
-//       scoreHolder.textContent = score.toString(10);
-//       console.log("Le score est à " + score);
-//       console.log("----- fin d'itération à " + i);
-//       i++;
-//     }
-//   });
-//   proposition_3.addEventListener("click", () => {
-//     if (objet[i]!.Proposition_3! === objet[i]!.réponse!) {
-//       console.log(objet[i]);
-//       console.log(objet[i]?.Proposition_3 + " " + objet[i]?.réponse);
-//       score++;
-//       scoreHolder.textContent = score.toString(10);
-//       console.log("Le score est à " + score);
-//       console.log("----- fin d'itération à " + i);
-//       i++;
-//     }
-//   });
-//   proposition_4.addEventListener("click", () => {
-//     if (objet[i]!.Proposition_4! === objet[i]!.réponse!) {
-//       console.log(objet[i]);
-//       console.log(objet[i]?.Proposition_4 + " " + objet[i]?.réponse);
-//       score++;
-//       scoreHolder.textContent = score.toString(10);
-//       console.log("Le score est à " + score);
-//       console.log("----- fin d'itération à " + i);
-//       i++;
-//     }
-//   });
-// }
-
-=======
->>>>>>> main
 function questionAndPropositionsDisplayer(
   obj: Array<innerType>,
   index: number
@@ -227,8 +160,6 @@ function questionAndPropositionsDisplayer(
   proposition_3.textContent = obj[index]?.Proposition_3!;
   proposition_4.textContent = obj[index]?.Proposition_4!;
 
-<<<<<<< HEAD
-=======
    if (index === 2) {
     drapeau.style.display = "block";
   } else {
@@ -237,7 +168,6 @@ function questionAndPropositionsDisplayer(
 
 
 
->>>>>>> main
   indice.addEventListener("click", () => {
     indiceplaceholder.textContent = questions_propositions[index]?.indice!;
   });
@@ -251,11 +181,7 @@ commencer.addEventListener("click", () => {
   questionAndPropositionsDisplayer(questions_propositions, iterator);
   console.log("index gameLauncher " + iterator);
   responseSelected(iterator);
-<<<<<<< HEAD
-});
-=======
   });
->>>>>>> main
 
 rejouer.addEventListener("click", () => {
   emptyField();
@@ -274,8 +200,5 @@ function emptyField(): void {
   responseChecker = "";
   scoreHolder.textContent = score.toString(10);
 }
-<<<<<<< HEAD
-=======
 // fonction apparition page de scores à la fin des 10 questions
 //quand 
->>>>>>> main
