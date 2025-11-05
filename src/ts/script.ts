@@ -222,8 +222,7 @@ commencer.addEventListener("click", () => {
   questionAndPropositionsDisplayer(questions_propositions, iterator);
   console.log("index gameLauncher " + iterator);
   responseSelected(iterator);
-  console.log("Hello!");
-});
+  });
 
 rejouer.addEventListener("click", () => {
   emptyField();
