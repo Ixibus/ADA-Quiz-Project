@@ -81,9 +81,11 @@ let indiceplaceholder = document.querySelector(
 
 let scoreHolder = document.querySelector("#score") as HTMLElement;
 let responseChecker: string;
+
 let drapeau = document.querySelector("#drapeau") as HTMLImageElement;
 let pageScore = document.querySelector("#Scores_container") as HTMLElement;
 let scoreFinal = document.querySelector("#score_final") as HTMLElement;
+
 
 // ------ boolean checker
 
