@@ -16,7 +16,7 @@ let questions_propositions: innerType[] = [
     Proposition_3: "1 030 000km2",
     Proposition_4: "25 000m3...",
     réponse: "550 000km2",
-    indice: "La superficie de l'espagne est de 506 000 km2",
+    indice: "La superficie de l'Espagne est de 506 000 km2",
   },
   {
     question: "D’après vous, l’Europe est-elle plus grande que l’Afrique ?",
@@ -119,7 +119,7 @@ function responseSelected(index: number): void {
     responseChecker = questions_propositions[index]!.Proposition_4!;
     console.log(responseChecker);
   });
-  
+
   valider.addEventListener("click", () => {
     console.log(responseChecker + "<---- la réponse choisie");
     if (responseChecker === questions_propositions[index]!.réponse!) {
@@ -149,37 +149,37 @@ function questionAndPropositionsDisplayer(
   proposition_2.textContent = obj[index]?.Proposition_2!;
   proposition_3.textContent = obj[index]?.Proposition_3!;
   proposition_4.textContent = obj[index]?.Proposition_4!;
-  
-  indice.addEventListener("click", () => {
-  indiceplaceholder.textContent = questions_propositions[index]?.indice!;
-});
 
+  indice.addEventListener("click", () => {
+    indiceplaceholder.textContent = questions_propositions[index]?.indice!;
+  });
 }
 
 let iterator = 0;
 let score = 0;
 
 commencer.addEventListener("click", () => {
-  iterator = 0;
-  score = 0;
-  indiceplaceholder.textContent = "";
-  scoreHolder.textContent = score.toString(10);
+  emptyField();
   questionAndPropositionsDisplayer(questions_propositions, iterator);
   console.log("index gameLauncher " + iterator);
   responseSelected(iterator);
 });
 
 rejouer.addEventListener("click", () => {
-  iterator = 0;
-  console.log("index gameRebooter " + iterator);
+  emptyField();
   questionHolder.textContent = "QUESTIONS";
   propositions.forEach((el, i) => (el.textContent = `Proposition_test ${i}`));
-  
-  score = 0;
-  responseChecker = "";
-  indiceplaceholder.textContent = "";
-  scoreHolder.textContent = score.toString(10);
+
   questionAndPropositionsDisplayer(questions_propositions, iterator);
+  console.log("index gameRebooter " + iterator);
   responseSelected(iterator);
 });
 
+function emptyField(): void {
+  iterator = 0;
+  score = 0;
+  indiceplaceholder.textContent = "";
+  responseChecker = "";
+  scoreHolder.textContent = score.toString(10);
+  responseSelected(0);
+}
