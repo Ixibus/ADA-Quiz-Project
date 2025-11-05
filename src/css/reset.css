@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+=======
 /* https://www.joshwcomeau.com/css/custom-css-reset/ */
 
 /* 1. Use a more-intuitive box-sizing model */
@@ -105,4 +111,5 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+>>>>>>> main
 }
