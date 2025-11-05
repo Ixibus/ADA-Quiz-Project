@@ -82,8 +82,18 @@ let indiceplaceholder = document.querySelector(
 let scoreHolder = document.querySelector("#score") as HTMLElement;
 let responseChecker: string;
 
+<<<<<<< HEAD
 // ------ boolean checker
 
+=======
+let drapeau = document.querySelector("#drapeau") as HTMLImageElement;
+let pageScore = document.querySelector("#Scores_container") as HTMLElement;
+let scoreFinal = document.querySelector("#score_final") as HTMLElement;
+
+
+// ------ boolean checker
+
+>>>>>>> main
 let propositions = document.querySelectorAll<HTMLElement>(".propositions");
 // let isActiveForAnyPropositionSelected: boolean = false;
 // let isActiveP1: boolean = false;
@@ -136,9 +146,15 @@ function responseSelected(index: number): void {
       indiceplaceholder.textContent = "";
       questionAndPropositionsDisplayer(questions_propositions, index);
     }
+    if (index === questions_propositions.length) {
+       pageScore.style.display = "block";
+       scoreFinal.textContent= score.toString(10);
+    }
+
   });
 }
 
+<<<<<<< HEAD
 
 // let i = 0;
 // valider.addEventListener("click", () => {
@@ -198,6 +214,8 @@ function responseSelected(index: number): void {
 //   });
 // }
 
+=======
+>>>>>>> main
 function questionAndPropositionsDisplayer(
   obj: Array<innerType>,
   index: number
@@ -209,6 +227,17 @@ function questionAndPropositionsDisplayer(
   proposition_3.textContent = obj[index]?.Proposition_3!;
   proposition_4.textContent = obj[index]?.Proposition_4!;
 
+<<<<<<< HEAD
+=======
+   if (index === 2) {
+    drapeau.style.display = "block";
+  } else {
+    drapeau.style.display = "none";
+  }
+
+
+
+>>>>>>> main
   indice.addEventListener("click", () => {
     indiceplaceholder.textContent = questions_propositions[index]?.indice!;
   });
@@ -222,7 +251,11 @@ commencer.addEventListener("click", () => {
   questionAndPropositionsDisplayer(questions_propositions, iterator);
   console.log("index gameLauncher " + iterator);
   responseSelected(iterator);
+<<<<<<< HEAD
 });
+=======
+  });
+>>>>>>> main
 
 rejouer.addEventListener("click", () => {
   emptyField();
@@ -241,3 +274,8 @@ function emptyField(): void {
   responseChecker = "";
   scoreHolder.textContent = score.toString(10);
 }
+<<<<<<< HEAD
+=======
+// fonction apparition page de scores à la fin des 10 questions
+//quand 
+>>>>>>> main
