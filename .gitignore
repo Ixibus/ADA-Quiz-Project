@@ -4,6 +4,8 @@ orga/
 testTsFolder/
 *.docx
 *.txt
+*.pptx
+*.pdf
 
 .DS_Store
 Thumbs.db

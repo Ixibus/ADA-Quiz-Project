@@ -166,8 +166,6 @@ function questionAndPropositionsDisplayer(
     drapeau.style.display = "none";
   }
 
-
-
   indice.addEventListener("click", () => {
     indiceplaceholder.textContent = questions_propositions[index]?.indice!;
   });
