@@ -116,12 +116,19 @@ let indiceplaceholder = document.querySelector(
 ) as HTMLElement;
 
 let responseChecker: string;
+<<<<<<< HEAD
 let drapeau = document.querySelector("#drapeau") as HTMLImageElement;
 let pageScore = document.querySelector("#Scores_container") as HTMLElement;
 let scoreFinal = document.querySelector("#score_final") as HTMLElement;
 let revenirAuMenu = document.querySelector("#menu") as HTMLElement;
 let revenirSectionConsignes = document.querySelector("#consignes_container") as HTMLElement;
 
+=======
+
+let drapeau = document.querySelector("#drapeau") as HTMLImageElement;
+let pageScore = document.querySelector("#Scores_container") as HTMLElement;
+let scoreFinal = document.querySelector("#score_final") as HTMLElement;
+>>>>>>> 1c82daa572f86421c7f090ac94a1024168525d33
 
 
 // ------ boolean checker
@@ -204,6 +211,11 @@ function questionAndPropositionsDisplayer(
     drapeau.style.display = "none";
   }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 1c82daa572f86421c7f090ac94a1024168525d33
   indice.addEventListener("click", () => {
     indiceplaceholder.textContent = questions_propositions[index]?.indice!;
   });
@@ -221,7 +233,11 @@ commencer.addEventListener("click", () => {
   questionAndPropositionsDisplayer(questions_propositions, iterator);
   console.log("index gameLauncher " + iterator);
   responseSelected(iterator);
+<<<<<<< HEAD
 });
+=======
+  });
+>>>>>>> 1c82daa572f86421c7f090ac94a1024168525d33
 
 rejouer.addEventListener("click", () => {
   emptyField();
